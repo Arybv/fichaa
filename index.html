@@ -1,0 +1,89 @@
+<!-- En la Clínica Lab necesitan crear un informe con los datos de los pacientes registrados. Para esto debe escribir una función que reciba como los inputs de nombre, apellido, edad, genero, ciudad y país.
+Cree un objeto basado en constructor asignando los parámetros entregados como propiedades y agregue un método del objeto llamado ficha que retorne la ficha del paciente con su nombre, apellido, edad y país.
+Ejemplo:
+Input:
+    nombre = "Blanca"
+    apellido = "Pérez"
+    edad = 19
+    genero = "Femenino"
+    ciudad = "Santiago"
+    pais = "Chile"
+Output(en el HTML):
+    "Nombre: Blanca Pérez"
+    "Edad: 19"
+    "País: Chile"
+-TIP: elabora un formulario para obtener todos los datos de los pacientes, después, por cada paciente crea un nuevo objeto que esté almecenado en un array
+-TIP 2: por cada paciente nuevo que se ingrese crea un div donde estén contenidos sus datos :)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--<link text="assets/css" rel="main" href="main.css"/>-->
+</head>
+<body>
+  <h1 style="text-align:center; color:purple">Ficha de Paciente</h1>
+<!--  <div>
+    <label for="">Nombre:</label><br>
+    <input type="Nombre">
+  </div>
+
+  <div>
+    <label for="">Apellido:</label><br>
+    <input type="Apellido">
+  </div>
+
+  <div>
+    <label for="">Edad:</label><br>
+    <input type="Edad">
+  </div>
+
+  <div>
+    <label for="">Genero:</label><br>
+    <input type="Genero">
+  </div>
+
+  <div>
+    <label for="">Ciudad:</label><br>
+    <input type="Ciudad">
+  </div>
+
+  <div>
+    <label for="">País:</label><br>
+    <input type="Pais">
+  </div><br>
+
+<input type="submit"> -->
+  <script>
+    var nomb = prompt("Nombre: ");
+    var apel = prompt("Apellido: ");
+    var ed = prompt("Edad: ");
+    var gene = prompt("Género: ");
+    var ciu= prompt("Ciudad: ");
+    var pai= prompt("País: ");
+
+    function Paciente(nombre, apellido, edad, genero, ciudad, pais,ficha){
+      this.nombre=    nombre;
+      this.apellido=  apellido;
+      this.edad=      edad;
+      this.genero=    genero;
+      this.ciudad=    ciudad;
+      this.pais=      pais;
+
+      this.ficha=     function(){
+        document.write("Nombre: " + this.nombre + " " + "<br>" +
+                       "Apellido: " + this.apellido + " " + "<br>" +
+                       "Tiene: " + this.edad + " " + "años" + " " + "<br>" +
+                       "Ciudad: " + this.ciudad + " " + "<br>" +
+                       "País: " + this.pais);
+    };
+  }
+  var nombrePaciente= new Paciente(nomb,apel,ed,gene,ciu,pai);
+    nombrePaciente.ficha();
+// var fichaFinal=nombrePaciente.push();
+  </script>
+</body>
+</html>
